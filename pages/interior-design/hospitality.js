@@ -1,8 +1,11 @@
 import Head from 'next/head'
+import fetchFromCMS from '../../lib/service';
 import Layout from '../../components/Layout';
 
-export default function Hospitality_ID() {
-    
+export default function Hospitality_ID({ designItems }) {
+
+  let projects = designItems.slice().reverse().filter(p => p.category == 'hospitality')
+
   return (
     <Layout>
 
@@ -15,6 +18,14 @@ export default function Hospitality_ID() {
         <div className="categories categories__wrap">
 
           {/* Cards generation */}
+          {projects.map((p) => (
+            <div className="category category__header">
+              <div className="category-title ">{p.title} - {p.location} </div>
+              <a href={"/interior-design/project/" + p.slug} className="category-image">
+                <img src={p.image.url} alt="Category" />
+              </a>
+            </div>
+          ))}
 
 
           {/* Last card to send last real flexbox element to the left */}
@@ -24,3 +35,11 @@ export default function Hospitality_ID() {
     </Layout>
   );
 };
+
+export async function getStaticProps() { // Fetch the corresponding collection and returns it
+  const designItems = await fetchFromCMS('designs');
+  return {
+    props: { designItems },
+    revalidate: 1,
+  };
+}

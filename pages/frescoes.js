@@ -21,7 +21,7 @@ export default function Frescoes({ frescoItems }) {
           { projects.map( (p) => (
             <div className="category category__header">
               <div className="category-title ">{ p.title } - { p.location } </div>
-              <a href="click.html" className="category-image">
+              <a href={ "/frescoes/" + p.slug} className="category-image">
                 <img src={ p.image.url } alt="Category"/>
               </a>
             </div>
