@@ -7,11 +7,30 @@ export default function InteriorDesign() {
 
       <Head>
         <title>Anne Schouler - Interior Design</title>
-        <link rel="stylesheet" href="/css/center.css"></link>
       </Head>
 
-      <div>
-          Interior Design works
+      <div className="content content__center">
+        <h4 className="content-title">Interior Design</h4>
+        <div className="categories">
+          <div className="category category__reverse">
+            <div className="category-title ">Residential</div>
+            <a href="/interior-design/residential" className="category-image">
+              <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+            </a>
+          </div>
+          <div className="category category__reverse">
+            <div className="category-title">Hospitality</div>
+            <a href="/interior-design/hospitality" className="category-image">
+              <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+            </a>
+          </div>
+          <div className="category category__reverse">
+            <div className="category-title">Retail</div>
+            <a href="/interior-design/retail" className="category-image">
+              <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+            </a>
+          </div>
+        </div>
       </div>
     </Layout>
   );
