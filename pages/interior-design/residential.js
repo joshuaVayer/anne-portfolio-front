@@ -1,17 +1,17 @@
 import Head from 'next/head'
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 
-export default function Frescoes() {
+export default function Residencial_ID() {
   const entries = ['Project 1', 'Project 2', 'Project 3', 'Project 4'];
   return (
     <Layout>
 
       <Head>
-        <title>Anne Schouler - Frescoes</title>
+        <title>Anne Schouler - Interior design</title>
       </Head>
 
       <div className="content">
-        <h4 className="content-title">Frescoes work</h4>
+        <h4 className="content-title">Residential</h4>
         <div className="categories categories__wrap">
 
           {/* Cards generation */}
