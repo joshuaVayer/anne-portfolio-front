@@ -1,8 +1,8 @@
-const DesignItem = () => {
+const FrescoItem = () => {
     return (
       <div>
         This is a test component
       </div>
     );
   };
-  export default DesignItem;
+  export default FrescoItem;
