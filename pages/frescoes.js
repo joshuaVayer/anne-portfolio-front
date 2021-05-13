@@ -1,8 +1,11 @@
 import Head from 'next/head'
+import fetchFromCMS from '../lib/service';
 import Layout from '../components/Layout';
 
-export default function Frescoes() {
-  const entries = ['Project 1', 'Project 2', 'Project 3', 'Project 4'];
+export default function Frescoes({ frescoItems }) {
+
+  let projects = frescoItems.slice().reverse() // Order the projects correctly
+
   return (
     <Layout>
 
@@ -15,11 +18,11 @@ export default function Frescoes() {
         <div className="categories categories__wrap">
 
           {/* Cards generation */}
-          {entries.map( (p) => (
+          { projects.map( (p) => (
             <div className="category category__header">
-              <div className="category-title ">{p} - Location </div>
+              <div className="category-title ">{ p.title } - { p.location } </div>
               <a href="click.html" className="category-image">
-                <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+                <img src={ p.image.url } alt="Category"/>
               </a>
             </div>
           ))}
@@ -31,3 +34,11 @@ export default function Frescoes() {
     </Layout>
   );
 };
+
+export async function getStaticProps() { // Fetch the corresponding collection and returns it
+  const frescoItems = await fetchFromCMS('frescoes');
+  return {
+    props: { frescoItems },
+    revalidate: 1,
+  };
+}
