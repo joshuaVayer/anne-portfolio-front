@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Navbar from './shared/Navbar'
 
 const Layout = ({ children }) => (
-    <div className="center">
+    <div className="wrapper">
         <Head>
             <title>Anne Schouler</title>
         </Head>

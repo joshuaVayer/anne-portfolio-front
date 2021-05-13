@@ -1,0 +1,9 @@
+.wrapper{
+    height: 100%;
+}
+#__next{
+    height: 100%;
+}
+html,body {
+    height: 100%;
+}

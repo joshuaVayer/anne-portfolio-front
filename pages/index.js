@@ -7,26 +7,26 @@ export default function Home() {
 
       <Head>
         <title>Anne Schouler - Home</title>
-        <link></link>
+        <link rel="stylesheet" href="/css/center.css"></link>
       </Head>
 
-      <div class="content content__center">
-        <div class="categories">
-          <div class="category">
-            <div class="category-title">Interior Design</div>
-            <a href="click.html" class="category-image">
+      <div className="content content__center">
+        <div className="categories">
+          <div className="category">
+            <div className="category-title">Interior Design</div>
+            <a href="/interior-design" className="category-image">
               <img src="https://via.placeholder.com/575x647.png" alt="Category" />
             </a>
           </div>
-          <div class="category">
-            <div class="category-title">Frecoes</div>
-            <a href="click.html" class="category-image">
+          <div className="category">
+            <div className="category-title">Frecoes</div>
+            <a href="/frescoes" className="category-image">
               <img src="https://via.placeholder.com/575x647.png" alt="Category" />
             </a>
           </div>
-          <div class="category">
-            <div class="category-title">Paintings</div>
-            <a href="click.html" class="category-image">
+          <div className="category">
+            <div className="category-title">Paintings</div>
+            <a href="/paintings" className="category-image">
               <img src="https://via.placeholder.com/575x647.png" alt="Category" />
             </a>
           </div>
