@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import fetchFromCMS from '../lib/service';
+import Link from 'next/link'
 import Layout from '../components/Layout';
 
 export default function Frescoes({ frescoItems }) {
@@ -20,9 +21,11 @@ export default function Frescoes({ frescoItems }) {
           {/* Cards generation */}
           { projects.map( (p) => (
             <div className="category category__header">
-              <div className="category-title ">{ p.title } - { p.location } </div>
-              <a href={ "/frescoes/" + p.slug} className="category-image">
-                <img src={ p.image.url } alt="Category"/>
+              <div className="category-title ">{ p.title } - { p.location } </div> 
+              <a className="category-image">
+                <Link as={`/fresco/${p.slug}`} href="/fresco/[id]">
+                  <img src={ p.image.url } alt="Category"/>
+                </Link>
               </a>
             </div>
           ))}
