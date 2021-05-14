@@ -26,7 +26,7 @@ export default function Painting() {
           </div>
           <div className="category category__reverse">
             <div className="category-title">Portraits</div>
-            <a href="/paintings/portraits" className="category-image">
+            <a href="/paintings/portrait" className="category-image">
               <img src="https://via.placeholder.com/575x647.png" alt="Category" />
             </a>
           </div>
