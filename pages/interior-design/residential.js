@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import fetchFromCMS from '../../lib/service';
 import Layout from '../../components/Layout';
 
@@ -21,8 +22,10 @@ export default function Residencial_ID({ designItems }) {
           {projects.map((p) => (
             <div className="category category__header">
               <div className="category-title ">{p.title} - {p.location} </div>
-              <a href={"/interior-design/project/" + p.slug} className="category-image">
-                <img src={p.image.url} alt="Category" />
+              <a className="category-image">
+                <Link as={`/project/${p.slug}`} href="/project/[id]">
+                  <img src={p.image.url} alt="Category" />
+                </Link>
               </a>
             </div>
           ))}
