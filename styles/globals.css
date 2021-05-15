@@ -131,7 +131,7 @@ footer a:hover {
   list-style-type: none;
 }
 .gallery li {
-  height: 35vh;
+  height: 40vh;
   flex-grow: 1;
   padding: 1vh;
 }
@@ -141,9 +141,11 @@ footer a:hover {
 }
 .gallery img {
   height: 100%;
-  width: 100%;
   object-fit: cover;
   vertical-align: bottom;
+}
+.gallery .cssbox_thumb {
+  min-width: 100%;
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -163,7 +165,7 @@ footer a:hover {
 
   .gallery li {
     height: auto;
-    max-width: 95vw;
+    width: 95vw;
   }
 
   .gallery img {

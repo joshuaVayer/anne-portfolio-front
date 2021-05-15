@@ -4,6 +4,7 @@ import Head from 'next/head'
 
 
 const FrescoItem = ({ frescoItem }) => {
+  console.log(frescoItem.gallery[0].formats.large.url);
   return (
     <Layout>
 
@@ -24,7 +25,7 @@ const FrescoItem = ({ frescoItem }) => {
             {frescoItem.gallery.map((img, index) => (
               <li>
                 <a id={ 'image' + index } href={ '#image' + index }>
-                  <img className="cssbox_thumb" src={ img.url } alt={ frescoItem.title } loading="lazy" />
+                  <img className="cssbox_thumb" src={ get_image(img.formats) } alt={ frescoItem.title } loading="lazy" />
                   <span className="cssbox_full">
                     <img src={ img.url } />
                     </span>
@@ -76,6 +77,12 @@ const get_location = (content) => {
   }
 }
 
+const get_image = (formats) => {
+  if( formats.medium == undefined ){
+    return formats.small.url
+  }
+  return formats.medium.url
+}
 
 // Arrow index calculation for the gallery
 const next = (current, length) => {
