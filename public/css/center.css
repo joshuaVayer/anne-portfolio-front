@@ -1,9 +1,9 @@
-.wrapper{
+.wrapper, #__next, html,body {
     height: 100%;
 }
-#__next{
-    height: 100%;
-}
-html,body {
-    height: 100%;
+
+@media only screen and (orientation: portrait) {
+    .wrapper, #__next, html,body {
+      height: auto;
+    }
 }

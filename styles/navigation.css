@@ -11,7 +11,7 @@
 
 .header {
   font-family: var(--fontMain);
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   background-color: var(--primary);
   border-bottom: var(--secondary) solid 0.3rem;
@@ -61,10 +61,22 @@
   z-index: 9;
   background-color: var(--primary);
   font-size: 1.5rem;
-  border-left: var(--secondary) solid 3px;
+  border-bottom: var(--secondary) solid 4px;
   box-shadow: 2px 3px 8px black;
 }
-.header .sidebar-main {
+.header .sidebar__list {
+  margin: 0;
+  padding: 0;
+  height: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+.header .sidebar__list .sidebar-main {
+  width: 500px;
+  max-width: 100vw;
   font-size: 1.3rem;
   text-transform: uppercase;
 }
@@ -73,28 +85,24 @@
   text-transform: none;
 }
 .header .sidebar-secondary-list {
-  margin-left: -1.2rem;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.header .sidebar__list {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  padding-top: 5%;
   width: 100%;
-  padding-top: 15%;
-  padding-bottom: 15%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-content: space-between;
-  text-align: center;
+  justify-content: space-between;
 }
 .header .sidebar-display {
   display: block;
 }
 .header .sidebar__button {
   display: none;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  background-color: #e1d4c4;
 }
 .header .sidebar ul {
   list-style-type: none;

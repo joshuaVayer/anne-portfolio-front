@@ -12,7 +12,7 @@
 }
 .header {
   font-family: var(--fontMain);
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   background-color: var(--primary);
   border-bottom: var(--secondary) solid 0.3rem;
@@ -66,41 +66,49 @@
     z-index: 9;
     background-color: var(--primary);
     font-size: 1.5rem;
-    border-left: var(--secondary) solid 3px;
+    border-bottom: var(--secondary) solid 4px;
     box-shadow: 2px 3px 8px black;
-    &-main{
-      font-size: 1.3rem;
-      text-transform: uppercase;
+    &__list {
+      margin: 0;
+      padding: 0;
+      height: 90%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      .sidebar-main {
+        width: 500px;
+        max-width: 100vw;
+        font-size: 1.3rem;
+        text-transform: uppercase
+      }
     }
     &-secondary {
       font-size: 1rem;
       text-transform: none;
       &-list {
-        margin-left: -1.2rem;
+        margin: 0;
+        padding: 0;
+        padding-top: 5%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
       }
     }
-    &__list {
-      height: 100%;
-      width: 100%;
-      padding-top: 15%;
-      padding-bottom: 15%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-content:space-between ;
-      text-align: center;
 
-    }
 
     &-display {
       display: block;
     }
     &__button {
       display: none;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      background-color: #e1d4c4;
     }
     ul {
       list-style-type: none;

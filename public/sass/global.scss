@@ -190,6 +190,51 @@ footer {
 }
 
 
+
+
+// Landscape (mobile and tablets)
+//-----------
+
+@media only screen and (orientation: landscape)  and (max-width: 800px) {
+  .category {
+    height: 110vw;
+    width: 85vw;
+    &-title {
+      font-size: 1.2em !important;
+    }
+    &-image {
+      height: 97.3vw;
+    }
+  }
+}
+
+// Portrait (mobile and tablets)
+//-----------
+
+@media only screen and (orientation: portrait) {
+  .categories {
+    flex-direction: column;
+    .category {
+      height: 110vw;
+      width: 85vw;
+      justify-content: flex-start;
+      &-title {
+        padding-top: 5vw;
+        font-size: 1.5em;
+      }
+      &__reverse {
+        .category-title {
+          padding-bottom: 5vw ;
+        }
+      }
+      &-image {
+        height: 97.3vw;
+        width: 100%;
+      }
+    }
+  }
+}
+
 //---------------
 // MOBILE
 //---------------
@@ -208,7 +253,7 @@ footer {
       height: 110vw;
       width: 85vw;
       &-title {
-        font-size: 1.5em;
+        font-size: 1.2em;
       }
       &-image {
         height: 97.3vw;
@@ -216,14 +261,3 @@ footer {
     }
   }
 }
-
-
-// Landscape (mobile and tablets)
-//-----------
-
-@media only screen and (orientation: landscape)  and (max-width: 700px) {
-  main{
-    background-color: magenta;
-  }
-}
-
