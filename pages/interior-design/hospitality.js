@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import func from '../../lib/global'
+import Link from 'next/link'
 import fetchFromCMS from '../../lib/service';
 import Layout from '../../components/Layout';
 
@@ -20,7 +22,7 @@ export default function Hospitality_ID({ designItems }) {
           {/* Cards generation */}
           {projects.map((p) => (
             <div className="category category__header">
-              <div className="category-title ">{p.title} - {p.location} </div>
+              <div className="category-title ">{ p.title }{ func.gets.get_card_location(p.location) }</div>
               <a className="category-image">
                 <Link as={`/project/${p.slug}`} href="/project/[id]">
                   <img src={p.image.url} alt="Category" />
@@ -37,6 +39,7 @@ export default function Hospitality_ID({ designItems }) {
     </Layout>
   );
 };
+
 
 export async function getStaticProps() { // Fetch the corresponding collection and returns it
   const designItems = await fetchFromCMS('designs');

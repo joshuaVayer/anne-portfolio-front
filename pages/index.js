@@ -19,7 +19,7 @@ export default function Home() {
             </a>
           </div>
           <div className="category">
-            <div className="category-title">Frecoes</div>
+            <div className="category-title">Frescoes</div>
             <a href="/frescoes" className="category-image">
               <img src="https://via.placeholder.com/575x647.png" alt="Category" />
             </a>
