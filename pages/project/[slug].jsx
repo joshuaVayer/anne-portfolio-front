@@ -25,7 +25,7 @@ const DesignItem = ({ designItem }) => {
             {designItem.gallery.map((img, index) => (
               <li>
                 <a id={ 'image' + index } href={ '#image' + index }>
-                  <img className="cssbox_thumb" src={ func.gets.get_image(img.formats) } alt={ designItem.title } loading="lazy" />
+                  <img className="cssbox_thumb" src={ func.gets.get_image(img.formats, img.url) } alt={ designItem.title } loading="lazy" />
                   <span className="cssbox_full">
                     <img src={ img.url } />
                     </span>
