@@ -15,19 +15,19 @@ export default function InteriorDesign() {
           <div className="category category__reverse">
             <div className="category-title ">Residential</div>
             <a href="/interior-design/residential" className="category-image">
-              <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+              <img src="https://res.cloudinary.com/anne-schouler/image/upload/v1622036627/Illustration/residentiel_naxph6.jpg" alt="Category" />
             </a>
           </div>
           <div className="category category__reverse">
             <div className="category-title">Hospitality</div>
             <a href="/interior-design/hospitality" className="category-image">
-              <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+              <img src="https://res.cloudinary.com/anne-schouler/image/upload/v1622036627/Illustration/hospitality_he9ajf.jpg" alt="Category" />
             </a>
           </div>
           <div className="category category__reverse">
             <div className="category-title">Retail</div>
             <a href="/interior-design/retail" className="category-image">
-              <img src="https://via.placeholder.com/575x647.png" alt="Category" />
+              <img src="https://res.cloudinary.com/anne-schouler/image/upload/v1622036627/Illustration/retail_bkwkrv.jpg" alt="Category" />
             </a>
           </div>
         </div>
