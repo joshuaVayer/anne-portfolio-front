@@ -39,7 +39,7 @@ const Navbar = () => (
                     </ul>
                 </li>
                 <li className="sidebar-main"><a className="nav-link" href="/about">About</a></li>
-                <li className="sidebar-main"><a className="nav-link" href="">Contact</a></li>
+                <li className="sidebar-main"><a className="nav-link" data-bs-toggle="modal" href="#modal" role="button">Contact</a></li>
             </ul>
         </div>
         {/* Contact modal box */}

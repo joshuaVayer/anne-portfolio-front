@@ -180,6 +180,7 @@ footer {
 @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
   .gallery ul {
     flex-direction: row;
+    padding: 0;
   }
 
   .gallery li {
@@ -223,13 +224,17 @@ footer {
       width: 85vw;
       justify-content: flex-start;
       &-title {
-        padding-top: 5vw;
+        padding-top: 3vw;
+        padding-bottom: 2vw;
         font-size: 1.5em;
       }
       &__reverse {
         .category-title {
           padding-bottom: 5vw ;
         }
+      }
+      &__last{
+        height: 0px !important;
       }
       &-image {
         height: 97.3vw;
