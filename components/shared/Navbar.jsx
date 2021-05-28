@@ -52,7 +52,7 @@ const Navbar = () => (
                     </div>
                     <div className="modal-body text-center">
                         <p><a href="mailto:">anneschouler@email.com</a></p>
-                        <img className="p-4" src="/img/separator.png" alt="separator" />
+                        <img className="p-4" src="/img/separator_double.png" alt="separator" />
                         <p>01.05.30.02.03</p>
                     </div>
                 </div>
