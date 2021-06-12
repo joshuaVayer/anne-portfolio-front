@@ -51,9 +51,9 @@ const Navbar = () => (
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body text-center">
-                        <p><a href="mailto:">anneschouler@email.com</a></p>
+                        <p><a href="mailto:anneschouler@hotmail.com">anneschouler@hotmail.com</a></p>
                         <img className="p-4" src="/img/separator_double.png" alt="separator" />
-                        <p>01.05.30.02.03</p>
+                        <p>(+34) 656 34 64 95</p>
                     </div>
                 </div>
             </div>
