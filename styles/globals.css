@@ -116,6 +116,7 @@ footer a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.5rem;
 }
 .categories .category__header .category-image {
   z-index: 0;
@@ -185,7 +186,7 @@ footer a:hover {
     width: 85vw;
   }
   .category-title {
-    font-size: 1.2em !important;
+    font-size: 1em !important;
   }
   .category-image {
     height: 97.3vw;

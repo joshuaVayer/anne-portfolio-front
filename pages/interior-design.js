@@ -21,7 +21,7 @@ export default function InteriorDesign() {
           <div className="category category__reverse">
             <div className="category-title">Hospitality</div>
             <a href="/interior-design/hospitality" className="category-image">
-              <img src="https://res.cloudinary.com/anne-schouler/image/upload/v1622036627/Illustration/hospitality_he9ajf.jpg" alt="Category" />
+              <img src="https://res.cloudinary.com/anne-schouler/image/upload/v1623483074/Illustration/hospitality_y6rpnd.jpg" alt="Category" />
             </a>
           </div>
           <div className="category category__reverse">
