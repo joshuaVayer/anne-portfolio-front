@@ -24,15 +24,37 @@ const DesignItem = ({ designItem }) => {
             {/* Gallery generation */}
             {designItem.gallery.map((img, index) => (
               <li>
-                <a id={ 'image' + index } href={ '#image' + index }>
-                  <img className="cssbox_thumb" src={ func.gets.get_image(img.formats, img.url) } alt={ designItem.title } loading="lazy" />
-                  <span className="cssbox_full">
-                    <img src={ img.url } />
-                    </span>
+                <a >
+                  <img
+                    className="cssbox_thumb" 
+                    onClick={() => func.gallery.pop(index)} 
+                    src={func.gets.get_image(img.formats, img.url)} 
+                    alt={ designItem.title } 
+                    loading="lazy" 
+                  />
+                  <span className="cssbox_full cssbox_hidden" data-full={index}>
+                    <img src={ img.url } alt={ designItem.title } />
+                    <a className="cssbox_close" 
+                      onClick={() => func.gallery.shut(index)}>
+                    </a>
+                    <a className="cssbox_next"
+                      onClick={() => func.gallery.switch(
+                        index, 
+                        func.gallery.getNext(index, designItem.gallery.length)
+                      )}
+                    >
+                      &#8594;
+                    </a>
+                    <a className="cssbox_prev"
+                      onClick={() => func.gallery.switch(
+                        index, 
+                        func.gallery.getPrev(index, designItem.gallery.length)
+                      )}
+                    >
+                      &#8592;
+                    </a>
+                  </span>
                 </a>
-                <a className="cssbox_close" href="#void"></a>
-                <a className="cssbox_next" href={ '#image' + func.gallery.next(index, designItem.gallery.length) }>&#8594;</a>
-                <a className="cssbox_prev" href={ '#image' + func.gallery.prev(index, designItem.gallery.length) }>&#8592;</a>
               </li>
             ))}
 

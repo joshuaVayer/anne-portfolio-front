@@ -18,25 +18,44 @@ const FrescoItem = ({ frescoItem }) => {
       <div className="content content_project">
         <h4 className="content-title">{ frescoItem.title }<span>{ func.gets.get_card_location(frescoItem.location) }</span></h4>
 
-        { func.gets.get_content(frescoItem.content) }
+        {func.gets.get_content(frescoItem.content)}
 
         <div className="gallery">
           <ul>
-            {/* Gallery generation */}
-            {frescoItem.gallery.map((img, index) => (
+            { frescoItem.gallery.map((img, index) => (
               <li>
-                <a id={ 'image' + index } href={ '#image' + index }>
-                  <img className="cssbox_thumb" src={ func.gets.get_image(img.formats, img.url) } alt={ frescoItem.title } loading="lazy" />
-                  <span className="cssbox_full">
+                <a>
+                  <img 
+                    className="cssbox_thumb" 
+                    onClick={() => func.gallery.pop(index)} 
+                    src={func.gets.get_image(img.formats, img.url)} 
+                    alt={ frescoItem.title } loading="lazy" 
+                  />
+                  <span className="cssbox_full cssbox_hidden" data-full={index}>
                     <img src={ img.url } />
-                    </span>
+                    <a className="cssbox_close" 
+                      onClick={() => func.gallery.shut(index)}>
+                    </a>
+                    <a className="cssbox_next"
+                      onClick={() => func.gallery.switch(
+                        index, 
+                        func.gallery.getNext(index, frescoItem.gallery.length)
+                      )}
+                    >
+                      &#8594;
+                    </a>
+                    <a className="cssbox_prev"
+                      onClick={() => func.gallery.switch(
+                        index, 
+                        func.gallery.getPrev(index, frescoItem.gallery.length)
+                      )}
+                    >
+                      &#8592;
+                    </a>
+                  </span>
                 </a>
-                <a className="cssbox_close" href="#void"></a>
-                <a className="cssbox_next" href={ '#image' + func.gallery.next(index, frescoItem.gallery.length) }>&#8594;</a>
-                <a className="cssbox_prev" href={ '#image' + func.gallery.prev(index, frescoItem.gallery.length) }>&#8592;</a>
               </li>
             ))}
-
             {/* Empty <li> here so the final photo doesn't stretch like crazy */}
             <li></li>
           </ul>
