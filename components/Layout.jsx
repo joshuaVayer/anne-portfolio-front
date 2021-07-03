@@ -5,6 +5,13 @@ const Layout = ({ children }) => (
     <div className="wrapper">
         <Head>
             <title>Anne Schouler</title>
+            <meta name="title" content="Anne Schouler - Interior Designer and Painter" />
+            <meta name="description" content="Anne Schouler's personal portfolio." />
+            <meta name="keywords" content="Anne Schouler, Schouler, Painter, Mallorca, Interior Design, Palma de Mallorca" />
+            <meta name="robots" content="index, follow" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="language" content="English" />
+            <meta property="og:image" content="https://res.cloudinary.com/anne-schouler/image/upload/v1622114160/thumbnail_format_A_sania_spa_39f5a5c50a.jpg" />
         </Head>
         <main>
             <Navbar />
