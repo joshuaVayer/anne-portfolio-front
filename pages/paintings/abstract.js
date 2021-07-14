@@ -6,7 +6,8 @@ import Layout from '../../components/Layout';
 export default function Abstract_Pt({ paintingItems }) {
 
     let paintings = paintingItems.slice().reverse().filter(p => p.category == 'abstract')
-
+    console.log(paintingItems);
+    
     return (
         <Layout>
 
@@ -31,11 +32,14 @@ export default function Abstract_Pt({ paintingItems }) {
                                         src={p.image.url}
                                         alt={p.image.name}
                                         loading="lazy" />
+                                    
                                     <span className="cssbox_full cssbox_hidden">
-                                        <img src={p.image.url} />
-                                        <i>
-                                            {func.gets.get_size(p.size)}
-                                        </i>
+                                        <div className="cssbox_wrapper">
+                                            <div className="cssbox_fit">
+                                                <img src={p.image.url} />
+                                                <span className="cssbox_size">{p.sizes}</span>
+                                            </div>
+                                        </div>
                                         <a className="cssbox_close"
                                             onClick={() => func.gallery.shut(index)}>
                                         </a>

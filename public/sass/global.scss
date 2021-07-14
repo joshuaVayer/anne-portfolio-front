@@ -164,28 +164,20 @@ footer {
 
 }
 
-.about{
+.about {
   display: flex;
-  width: 90%;
+  width: 85%;
   margin: auto;
-  gap: 30px;
-  position: relative;
+  gap: 40px;
+  margin-top: 35px;
   &-image{
-    position: fixed;
-    top: 13vh;
-    width: 50%;
-    height: 85vh;
-    display: flex;
-    align-self: center;
+    min-width: 55%;
     img {
       width: 100%;
       height: auto;
-      object-fit: contain;
     }
   }
   &-content{
-    margin-top: 30px;
-    padding-left: 59%;
     font-size: 14px;
   }
 }
@@ -266,6 +258,12 @@ footer {
         height: 97.3vw;
         width: 100%;
       }
+    }
+  }
+  .about {
+    flex-direction: column-reverse;
+    &-image{
+      width: 100%;
     }
   }
 }
