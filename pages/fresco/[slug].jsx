@@ -32,7 +32,11 @@ const FrescoItem = ({ frescoItem }) => {
                     alt={ frescoItem.title } loading="lazy" 
                   />
                   <span className="cssbox_full cssbox_hidden" data-full={index}>
-                    <img src={ img.url } />
+                    <div className="cssbox_wrapper">
+                      <div className="cssbox_fit">
+                        <img src={ img.url } />
+                      </div>
+                    </div>
                     <a className="cssbox_close" 
                       onClick={() => func.gallery.shut(index)}>
                     </a>

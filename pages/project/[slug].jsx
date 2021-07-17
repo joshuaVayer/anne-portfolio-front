@@ -33,7 +33,11 @@ const DesignItem = ({ designItem }) => {
                     loading="lazy" 
                   />
                   <span className="cssbox_full cssbox_hidden" data-full={index}>
-                    <img src={ img.url } alt={ designItem.title } />
+                    <div className="cssbox_wrapper">
+                      <div className="cssbox_fit">
+                        <img src={ img.url } alt={ designItem.title } />
+                      </div>
+                    </div>
                     <a className="cssbox_close" 
                       onClick={() => func.gallery.shut(index)}>
                     </a>
